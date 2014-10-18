@@ -49,7 +49,7 @@ class SIGSET(ctypes.Structure):
     sigset_t container, usable for sigprocmask(2), sigpending(2) etc..
 
     """
-    NWORDS = 1024 / (8 * ctypes.sizeof(ctypes.c_uint))
+    NWORDS = int(1024 / (8 * ctypes.sizeof(ctypes.c_uint)))
 
     def __repr__(self):
         ret = []
