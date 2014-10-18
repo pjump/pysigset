@@ -217,13 +217,13 @@ if __name__ == '__main__':
     while not done:
         with suspended_signals(SIGINT, SIGTERM):
             # These three seconds are uninterruptible.
-            print 'uninterruptible'
+            print('uninterruptible')
             sleep(3)
 
         if done:
             break
-        print 'interruptible'
+        print('interruptible')
         sleep(3)
-    print 'done'
+    print('done')
 
 # vim: set ts=8 sw=4 sts=4 et ai tw=79:
